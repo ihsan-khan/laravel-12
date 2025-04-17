@@ -12,9 +12,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->app->bind('SomeServiceTest', function () {
+        $this->app->bind('SomeService', function ($app) {
             return new SomeService();
         });
+
     }
 
     /**

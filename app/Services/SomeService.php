@@ -6,6 +6,6 @@ class SomeService
 {
     public function doSomething()
     {
-        return "Doing something!";
+        return 'Doing something...';
     }
 }

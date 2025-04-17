@@ -1,7 +1,10 @@
 <?php
 
+use PhpOption\Some;
 use App\Services\DosomeThing;
+use App\Services\SomeService;
 use App\Services\DoSomeThingFacade;
+use App\Services\SomeServiceFacade;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -9,9 +12,6 @@ Route::get('/', function () {
 });
 
 Route::get('/facade', function () {
-    // $dosomeThing = app('App\Services\DosomeThing');
-    // $dosomeThing = new DosomeThing();
-    // return $dosomeThing->doSomething();
-    return DoSomeThingFacade::doSomething(); //facade
+    return SomeServiceFacade::doSomething();
 })->name('facade'); 
 
